@@ -1,8 +1,8 @@
-# Café — a NimbusCMS theme
+# Storefront — a NimbusCMS theme
 
 A warm small-business theme for [NimbusCMS](https://github.com/NimbusCMS/nimbus) —
 a menu or catalogue, an about page, a landing hero. Plain PHP templates, one
-stylesheet, **no build step**. Extracted from the Nimbus demo (Fern & Kettle). An
+stylesheet, **no build step**. An
 official theme.
 
 ## Look
