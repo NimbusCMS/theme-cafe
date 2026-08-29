@@ -1,0 +1,18 @@
+{
+    "name": "Café",
+    "version": "0.1.0",
+    "description": "A warm small-business theme for NimbusCMS — a menu or catalogue, an about page, a landing hero. Plain PHP templates, one stylesheet, no build step. Extracted from the Nimbus demo (Fern & Kettle). An official theme.",
+    "nav": ["menu"],
+    "templates": {
+        "layout": "HTML shell; includes header and footer.",
+        "header": "Site header with the wordmark and the main menu.",
+        "footer": "Footer with hours, links, and contact.",
+        "entry-home": "The landing page (the `home` singleton) — hero + featured items.",
+        "entry": "A single page (an about / info `pages` entry).",
+        "collection-menu": "The menu (a `menu` collection), grouped by section with prices.",
+        "markdown": "Renders a Markdown field (pairs with the Markdown plugin).",
+        "404": "Themed not-found page."
+    },
+    "specialization": "entry-home renders the `home` singleton; collection-menu renders a `menu` collection (items with a section, price and optional featured flag). Rename the collection templates to fit any small-business catalogue (a shop, a services list).",
+    "assets": "Files under assets/ are served at /theme/assets/<path> (e.g. assets/app.css -> /theme/assets/app.css). Allowlisted types only; no PHP."
+}

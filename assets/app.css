@@ -1,0 +1,86 @@
+/* Fern & Kettle — a warm, quiet café theme for the NimbusCMS demo.
+   Zero JavaScript, one stylesheet, system fonts. */
+:root {
+  --bg: #faf6ef; --surface: #ffffff; --ink: #2b2620; --ink-soft: #6b6357;
+  --line: #e7ddcd; --fern: #3f6f52; --fern-dark: #2f5a41; --ember: #b5623c;
+  --wrap: 62rem;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+.wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 1.25rem; }
+.measure { max-width: 44rem; margin-inline: auto; }
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.15; color: var(--ink); letter-spacing: -.01em; }
+h1 { font-size: clamp(2rem, 6vw, 3.2rem); margin: 0 0 .4em; }
+h2 { font-size: 1.5rem; margin: 1.8em 0 .6em; }
+a { color: var(--fern-dark); }
+img { max-width: 100%; height: auto; }
+.eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: .72rem; font-weight: 700; color: var(--ember); margin: 0 0 .6rem; }
+.note { color: var(--ink-soft); font-size: .95rem; }
+
+/* header / footer */
+.skip-link { position: absolute; left: -999px; }
+.skip-link:focus { left: 1rem; top: .6rem; background: var(--surface); padding: .4rem .8rem; border-radius: 6px; }
+.site-header { border-bottom: 1px solid var(--line); background: var(--surface); }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 4rem; gap: 1rem; }
+.brand { display: inline-flex; align-items: center; gap: .5rem; font-family: Georgia, serif; font-size: 1.3rem; font-weight: 700; color: var(--ink); text-decoration: none; }
+.brand svg { color: var(--fern); }
+.site-nav { display: flex; gap: 1.3rem; flex-wrap: wrap; }
+.site-nav a { color: var(--ink-soft); text-decoration: none; font-weight: 600; font-size: .96rem; }
+.site-nav a:hover { color: var(--fern-dark); }
+.site-footer { border-top: 1px solid var(--line); margin-top: 3rem; background: var(--surface); }
+.site-footer .wrap { padding-block: 1.6rem; text-align: center; color: var(--ink-soft); font-size: .9rem; }
+.site-footer nav { display: flex; gap: 1.1rem; justify-content: center; margin: .4rem 0; flex-wrap: wrap; }
+.site-footer .weight { font-size: .82rem; }
+
+/* hero + bands */
+.hero { background: linear-gradient(180deg, #f2ece0, var(--bg)); border-bottom: 1px solid var(--line); }
+.hero .wrap { padding-block: clamp(3rem, 9vw, 6rem); text-align: center; }
+.hero .lead { font-size: 1.2rem; color: var(--ink-soft); max-width: 40rem; margin: .4rem auto 1.6rem; }
+.cta-row { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+.btn { display: inline-block; padding: .7rem 1.3rem; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: .98rem; }
+.btn-primary { background: var(--fern); color: #fff; }
+.btn-primary:hover { background: var(--fern-dark); }
+.btn-secondary { border: 1.5px solid var(--line); color: var(--ink); background: var(--surface); }
+.band { padding-block: 2.4rem; }
+.band-alt { background: var(--surface); border-block: 1px solid var(--line); }
+
+/* menu */
+.menu-page .wrap { padding-block: 2.6rem; }
+.menu-group { margin-top: 1.4rem; }
+.menu-group h2 { border-bottom: 2px solid var(--line); padding-bottom: .3rem; color: var(--fern-dark); }
+.menu-list { list-style: none; margin: 0; padding: 0; }
+.menu-item { padding: .7rem 0; border-bottom: 1px dashed var(--line); }
+.menu-row { display: flex; align-items: baseline; gap: .5rem; }
+.menu-name { font-weight: 700; }
+.menu-dots { flex: 1; border-bottom: 2px dotted var(--line); transform: translateY(-.25em); }
+.menu-price { font-variant-numeric: tabular-nums; color: var(--fern-dark); font-weight: 700; }
+.menu-desc { margin: .25rem 0 0; color: var(--ink-soft); font-size: .95rem; }
+.badge { display: inline-block; font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; background: #f0e7d6; color: var(--ember); padding: .1rem .45rem; border-radius: 999px; vertical-align: middle; font-weight: 700; }
+
+/* prose (pages) */
+.prose .wrap, article.prose { padding: 2.6rem 1.25rem; }
+.prose .measure { max-width: 44rem; }
+.prose .kicker { text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; color: var(--ember); font-weight: 700; }
+.prose .body p { margin: 0 0 1rem; }
+.prose .meta { color: var(--ink-soft); font-size: .9rem; }
+.back-link { display: inline-block; margin-top: 1.5rem; color: var(--ink-soft); text-decoration: none; }
+
+/* demo banner (shown only in demo mode) */
+.demo-banner { background: var(--fern); color: #fff; text-align: center; padding: 10px 16px; font-size: .92rem; line-height: 1.45; }
+.demo-banner a { color: #fff; font-weight: 700; }
+.demo-banner code { background: rgba(255,255,255,.2); padding: 1px 5px; border-radius: 4px; font-size: .9em; }
+
+@media (max-width: 640px) {
+  .site-header .wrap { flex-direction: column; align-items: flex-start; padding-block: .7rem; }
+}
+
+/* media */
+.hero-photo { display: block; width: 100%; max-width: 52rem; height: auto; aspect-ratio: 16/6; object-fit: cover; border-radius: 14px; margin: 2rem auto 0; box-shadow: 0 10px 30px rgba(43,38,32,.12); }
+.menu-item.has-photo { display: flex; gap: 1rem; align-items: flex-start; }
+.menu-photo { flex: none; width: 84px; height: 84px; object-fit: cover; border-radius: 10px; }
+.menu-item.has-photo .menu-body { flex: 1; min-width: 0; }
+.menu-body { width: 100%; }
